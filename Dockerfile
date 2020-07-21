@@ -15,6 +15,8 @@ WORKDIR /home/work/zMEC_face_host
 
 ENV DEBIAN_FRONTEND=noninteractive
 
+RUN apt-get update -y
+
 RUN apt-get install -y tzdata && apt-get install -y libopencv-dev
 
 RUN npm install -y opencv
