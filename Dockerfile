@@ -23,5 +23,7 @@ RUN npm install -y express && npm install -y body-parser && npm install -y formi
 
 RUN mkdir detected && mkdir upload
 
-CMD [ "node", "/home/work/zMEC_face_host/app.js" ]
+RUN npm install forever -g
+
+CMD [ "forever", "app.js" ]
 
